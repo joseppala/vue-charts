@@ -6,6 +6,8 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: {
+    'examples': path.resolve(__dirname, 'src', 'examples.js'),
+    'line-plot': path.resolve(__dirname, 'src', 'LinePlot.vue'),
   },
   output: {
     filename: '[name].js',
