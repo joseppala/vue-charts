@@ -2,6 +2,11 @@
   "name": "vue-charts",
   "version": "0.1.0",
   "description": "Collection of simple data visualizations with Vue",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js"
+  },
   "keywords": [
     "Graph",
     "Plot",
