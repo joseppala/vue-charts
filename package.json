@@ -1,0 +1,16 @@
+{
+  "name": "vue-charts",
+  "version": "0.1.0",
+  "description": "Collection of simple data visualizations with Vue",
+  "keywords": [
+    "Graph",
+    "Plot",
+    "SVG",
+    "Vue",
+    "Data",
+    "Visualization",
+    "Chart"
+  ],
+  "author": "Jussi Seppälä",
+  "license": "MIT"
+}
