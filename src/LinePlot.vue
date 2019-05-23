@@ -68,6 +68,9 @@ export default {
   },
   computed: {
     path() {
+      if (!this.points) {
+        return '';
+      }
       return this.points
         .map((point) => [this.mapX(point[0]), this.mapY(point[1])])
         .reduce((acc, point, i, points) => {

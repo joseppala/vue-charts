@@ -19,6 +19,9 @@ export default {
   },
   computed: {
     pointPositions() {
+      if (!this.points) {
+        return [];
+      }
       return this.points.map((point) => [this.mapX(point[0]), this.mapY(point[1])]);
     },
     pointStyle() {
