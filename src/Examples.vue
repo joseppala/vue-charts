@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="graph">
     <div class="plot-box" ref="container">
       <div v-if="width">
@@ -54,6 +55,40 @@
       </div>
     </div>
   </div>
+  <div class="graph">
+    <div class="plot-box" ref="container">
+      <div v-if="width">
+      <y-axis-ticks
+        :mapY="mapYCss"
+        textColor="#888888"
+        textPosition="left"
+        lineColor="#eeeeee"
+        lineLeft="-10px"
+        lineRight="-10px"
+        :lineWidth="1"
+        :ticks="yTicks">
+      </y-axis-ticks>
+      <x-axis-ticks
+        :mapX="mapXCss"
+        textColor="#888888"
+        textPosition="bottom"
+        lineColor="#eeeeee"
+        lineTop="100%"
+        lineBottom="-10px"
+        :lineWidth="1"
+        :ticks="xTicks">
+      </x-axis-ticks>
+      <bar-plot
+        :points="points"
+        :mapX="mapXCss"
+        :mapY="mapYCss"
+        :bar-width="10"
+        bar-color="#ffaa00">
+      </bar-plot>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -65,6 +100,7 @@ import YAxisTicks from './YAxisTicks.vue';
 import XAxisTicks from './XAxisTicks.vue';
 import YAxisTitle from './YAxisTitle.vue';
 import XAxisTitle from './XAxisTitle.vue';
+import BarPlot from './BarPlot.vue';
 
 
 export default {
@@ -74,7 +110,8 @@ export default {
     YAxisTicks,
     XAxisTicks,
     YAxisTitle,
-    XAxisTitle
+    XAxisTitle,
+    BarPlot
   },
   data() {
     return {
