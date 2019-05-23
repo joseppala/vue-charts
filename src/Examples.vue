@@ -82,7 +82,7 @@
         :points="points"
         :mapX="mapXCss"
         :mapY="mapYCss"
-        :bar-width="10"
+        bar-width="50%"
         bar-color="#ffaa00">
       </bar-plot>
       </div>
