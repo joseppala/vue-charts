@@ -2,29 +2,20 @@
 <div>
   <example-line-chart></example-line-chart>
   <example-bar-chart></example-bar-chart>
-  <radial-progress-bar
-    :progress="0.7"
-    :stroke-width="3"
-    :animation-duration="1"
-    :initial-animation="true"
-    fillColor="#00aaff"
-    backgroundColor="#eeeeee"
-    width="200px"
-    height="200px">
-  </radial-progress-bar>
+  <example-radial-progress-bar></example-radial-progress-bar>
 </div>
 </template>
 
 <script>
 import ExampleLineChart from './ExampleLineChart.vue';
 import ExampleBarChart from './ExampleBarChart.vue';
-import RadialProgressBar from './RadialProgressBar.vue';
+import ExampleRadialProgressBar from './ExampleRadialProgressBar.vue';
 
 export default {
   components: {
     ExampleLineChart,
     ExampleBarChart,
-    RadialProgressBar
+    ExampleRadialProgressBar
   }
 }
 </script>

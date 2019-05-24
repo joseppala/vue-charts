@@ -11,7 +11,7 @@
     <circle
       class="bar-fill"
       :style="fillStyle"
-      transform="rotate(90 50 50)"
+      :transform="fillTransform"
       fill="none"
       :r="radius" cx="50" cy="50" />
   </svg>
@@ -27,7 +27,8 @@ export default {
     width: String,
     height: String,
     animationDuration: Number,
-    initialAnimation: Boolean
+    initialAnimation: Boolean,
+    startPosition: String
   },
   data() {
     return {
@@ -59,6 +60,13 @@ export default {
         transition: stroke-dasharray ${this.animationDuration}s;
       `;
     },
+    fillTransform() {
+      if (this.startPosition === 'bottom') {
+        return 'rotate(90 50 50)';
+      } else {
+        return 'rotate(-90 50 50)';
+      }
+    }
   },
   watch: {
     progress: {
@@ -83,6 +91,9 @@ export default {
 </script>
 
 <style scoped>
+.svg {
+  display: inline-block;
+}
 .bar-fill {
   animation-timing-function: ease-out;
   stroke-dasharray: 0 1000;
