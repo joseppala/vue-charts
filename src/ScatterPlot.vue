@@ -14,8 +14,10 @@ export default {
     points: Array,
     mapX: Function,
     mapY: Function,
-    pointRadius: Number,
-    pointColor: String
+    pointSize: Number,
+    pointFillColor: String,
+    pointBorderColor: String,
+    pointBorderWidth: Number
   },
   computed: {
     pointPositions() {
@@ -25,19 +27,25 @@ export default {
       return this.points.map((point) => [this.mapX(point[0]), this.mapY(point[1])]);
     },
     pointStyle() {
-      return `
-        width: ${this.pointRadius * 2}px;
-        height: ${this.pointRadius * 2}px;
-        background-color: ${this.pointColor};
+      let styles = `
+        width: ${this.pointSize}px;
+        height: ${this.pointSize}px;
       `;
+      if (this.pointFillColor) {
+        styles += ` background-color: ${this.pointFillColor};`;
+      }
+      if (this.pointBorderColor && this.pointBorderWidth > 0) {
+        styles += ` border: ${this.pointBorderWidth}px solid  ${this.pointBorderColor};`;
+      }
+      return styles;
     }
   },
   methods: {
     getPointCircleStyle(point) {
       return `
         ${this.pointStyle}
-        left: ${point[0] - this.pointRadius}px;
-        top: ${point[1] - this.pointRadius}px;
+        left: ${point[0] - this.pointSize / 2}px;
+        top: ${point[1] - this.pointSize / 2}px;
       `
     }
   }

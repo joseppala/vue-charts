@@ -56,9 +56,10 @@
       :mapX="chart.mapXCss"
       :mapY="chart.mapYCss"
       :points="points"
-      :point-radius="5"
-      point-color="#00aaff"
-      line-color="#00aaff">
+      :point-size="10"
+      point-fill-color="#00aaff"
+      point-border-color="red"
+      :point-border-width="2">
     </scatter-plot>
   </chart>
 </div>
