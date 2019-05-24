@@ -26,7 +26,8 @@ export default {
     strokeWidth: Number,
     width: String,
     height: String,
-    animationDuration: Number
+    animationDuration: Number,
+    initialAnimation: Boolean
   },
   data() {
     return {
@@ -59,8 +60,24 @@ export default {
       `;
     },
   },
+  watch: {
+    progress: {
+      handler(val) {
+        this.val = val;
+      }
+    }
+  },
+  created() {
+    if (!this.initialAnimation || this.animationDuration <= 0) {
+      this.val = this.progress;
+    }
+  },
   mounted() {
-    this.val = this.$props.progress;
+    if (this.initialAnimation && this.animationDuration > 0) {
+      this.$nextTick(() => {
+        this.val = this.progress;
+      });
+    }
   }
 }
 </script>

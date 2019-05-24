@@ -3,9 +3,10 @@
   <example-line-chart></example-line-chart>
   <example-bar-chart></example-bar-chart>
   <radial-progress-bar
-    :progress="0.8"
+    :progress="0.7"
     :stroke-width="3"
-    :animation-duration="0.8"
+    :animation-duration="1"
+    :initial-animation="true"
     fillColor="#00aaff"
     backgroundColor="#eeeeee"
     width="200px"
