@@ -12,25 +12,31 @@
     </nav>
   </header>
   <div id="lineChart" class="example">
-    <div>
+    <div class="centering">
       <h3 class="example-title">Line Chart
-        <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleLineChart.vue">view code</a>
+        <span class="link-container">
+          <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleLineChart.vue">view code</a>
+        </span>
       </h3>
     </div>
     <example-line-chart></example-line-chart>
   </div>
   <div id="barChart"  class="example">
-    <div>
+    <div class="centering">
       <h3 class="example-title">Bar Chart
-        <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleBarChart.vue">view code</a>
+        <span class="link-container">
+          <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleBarChart.vue">view code</a>
+        </span>
       </h3>
     </div>
     <example-bar-chart></example-bar-chart>
   </div>
   <div id="radialProgressBar" class="example">
-    <div>
+    <div class="centering">
       <h3 class="example-title">Radial Progress Bar
-        <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleRadialProgressBar.vue">view code</a>
+        <span class="link-container">
+          <a href="https://github.com/joseppala/vue-charts/blob/master/src/docs/ExampleRadialProgressBar.vue">view code</a>
+        </span>
       </h3>
     </div>
     <example-radial-progress-bar></example-radial-progress-bar>
@@ -93,13 +99,26 @@ export default {
   .example {
     min-height: 70vh;
   }
+  .centering {
+    text-align: center;
+  }
   .example-title {
+    position: relative;
+    display: inline-block;
     font-weight: normal;
     text-align: center;
     margin-bottom: 0;
   }
   .example-title a {
+    margin: 0 16px;
     font-size: 0.6em;
+  }
+  .example-title .link-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    white-space: nowrap;
   }
   .title, .subtitle {
     font-weight: normal;
