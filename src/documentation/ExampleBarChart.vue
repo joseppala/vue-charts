@@ -45,12 +45,12 @@
 </template>
 
 <script>
-import Chart from './Chart.vue';
-import YAxisTicks from './YAxisTicks.vue';
-import XAxisTicks from './XAxisTicks.vue';
-import YAxisTitle from './YAxisTitle.vue';
-import XAxisTitle from './XAxisTitle.vue';
-import BarPlot from './BarPlot.vue';
+import Chart from '../lib/Chart.vue';
+import YAxisTicks from '../lib/YAxisTicks.vue';
+import XAxisTicks from '../lib/XAxisTicks.vue';
+import YAxisTitle from '../lib/YAxisTitle.vue';
+import XAxisTitle from '../lib/XAxisTitle.vue';
+import BarPlot from '../lib/BarPlot.vue';
 
 
 export default {

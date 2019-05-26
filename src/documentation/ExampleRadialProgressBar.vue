@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import RadialProgressBar from './RadialProgressBar.vue';
+import RadialProgressBar from '../lib/RadialProgressBar.vue';
 
 export default {
   components: {

@@ -66,13 +66,13 @@
 </template>
 
 <script>
-import Chart from './Chart.vue';
-import LinePlot from './LinePlot.vue';
-import ScatterPlot from './ScatterPlot.vue';
-import YAxisTicks from './YAxisTicks.vue';
-import XAxisTicks from './XAxisTicks.vue';
-import YAxisTitle from './YAxisTitle.vue';
-import XAxisTitle from './XAxisTitle.vue';
+import Chart from '../lib/Chart.vue';
+import LinePlot from '../lib/LinePlot.vue';
+import ScatterPlot from '../lib/ScatterPlot.vue';
+import YAxisTicks from '../lib/YAxisTicks.vue';
+import XAxisTicks from '../lib/XAxisTicks.vue';
+import YAxisTitle from '../lib/YAxisTitle.vue';
+import XAxisTitle from '../lib/XAxisTitle.vue';
 
 
 export default {
