@@ -43,7 +43,7 @@ export default {
 .flex-container {
   display: flex;
   width: 600px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .flex-item {
   flex-grow: 1;

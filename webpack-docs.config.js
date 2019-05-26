@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('./webpack-common.config');
 
 config.plugins.push(new HtmlWebpackPlugin({
-  template: path.resolve(__dirname, 'src', 'documentation', 'index.html'),
+  template: path.resolve(__dirname, 'src', 'docs', 'index.html'),
   filename: 'index.html',
   chunks: ['main']
 }));
@@ -11,7 +11,7 @@ config.plugins.push(new HtmlWebpackPlugin({
 module.exports = Object.assign(config, {
   mode: 'production',
   entry: {
-    'main': path.resolve(__dirname, 'src', 'documentation', 'documentation.js'),
+    'main': path.resolve(__dirname, 'src', 'docs', 'documentation.js'),
   },
   output: {
     filename: '[name].js',

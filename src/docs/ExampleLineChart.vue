@@ -2,7 +2,7 @@
 <div class="graph example-line-chart">
   <chart
     :margin="{
-      top: '40px',
+      top: '0',
       right: '30px',
       bottom: '80px',
       left: '80px'
@@ -58,7 +58,7 @@
       :points="points"
       :point-size="10"
       point-fill-color="#00aaff"
-      point-border-color="red"
+      point-border-color="#0088ff"
       :point-border-width="2">
     </scatter-plot>
   </chart>
@@ -131,7 +131,7 @@ export default {
     width: 90%;
     max-width: 600px;
     height: 400px;
-    margin: 100px auto;
+    margin: 0 auto;
   }
   .example-line-chart .y-axis-title,
   .example-line-chart .x-axis-title {

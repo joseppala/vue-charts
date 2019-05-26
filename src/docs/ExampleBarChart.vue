@@ -1,9 +1,9 @@
 <template>
 <div>
-  <div class="graph">
+  <div class="example-bar-chart">
     <chart
       :margin="{
-        top: '40px',
+        top: '0',
         right: '30px',
         bottom: '80px',
         left: '80px'
@@ -103,14 +103,14 @@ export default {
 </script>
 
 <style>
-  .graph {
+  .example-bar-chart {
     position: relative;
     width: 90%;
     max-width: 600px;
     height: 400px;
-    margin: 100px auto;
+    margin: 0 auto;
   }
-  .y-axis-title, .x-axis-title {
+  .example-bar-chart .y-axis-title, .x-axis-title {
     letter-spacing: 0.08em;
   }
 </style>
