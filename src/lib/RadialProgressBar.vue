@@ -24,6 +24,8 @@ export default {
     fillColor: String,
     backgroundColor: String,
     strokeWidth: Number,
+    strokeLinecap: String,
+    margin: Number,
     width: String,
     height: String,
     animationDuration: Number,
@@ -43,7 +45,8 @@ export default {
       `;
     },
     radius() {
-      return 50 - this.strokeWidth;
+      const margin = this.margin || 0;
+      return 50 - this.strokeWidth - margin;
     },
     backgroundStyle() {
       return `
@@ -54,6 +57,7 @@ export default {
     fillStyle() {
       const strokeLength = Math.round(this.val * 2 * Math.PI * this.radius);
       return `
+        stroke-linecap: ${this.strokeLinecap || 'butt'};
         stroke: ${this.fillColor};
         stroke-width: ${this.strokeWidth};
         stroke-dasharray: ${strokeLength} 1000;
@@ -92,7 +96,9 @@ export default {
 
 <style scoped>
 .svg {
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .bar-fill {
   animation-timing-function: ease-out;
