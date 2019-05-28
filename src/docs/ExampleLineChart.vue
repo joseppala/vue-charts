@@ -50,15 +50,15 @@
       :points="points"
       :smoothing="0.2"
       :line-width="3"
-      line-color="#00aaff">
+      line-color="#000000">
     </line-plot>
     <scatter-plot
       :mapX="chart.mapXCss"
       :mapY="chart.mapYCss"
       :points="points"
       :point-size="10"
-      point-fill-color="#00aaff"
-      point-border-color="#0088ff"
+      point-fill-color="#777777"
+      point-border-color="#000000"
       :point-border-width="2">
     </scatter-plot>
   </chart>

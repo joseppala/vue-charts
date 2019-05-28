@@ -2,8 +2,9 @@
 <div>
   <header class="header">
     <div>
-    <h1 class="title">Vue Charts</h1>
-    <h3 class="subtitle">Collection of Vue components for creating simple data visualizations</h3>
+      <div class="logo"></div>
+      <h1 class="title">Vue Charts</h1>
+      <h3 class="subtitle">Collection of Vue components for creating simple data visualizations</h3>
     </div>
     <nav class="nav">
       <a href="#lineChart">Line Chart</a> |
@@ -96,6 +97,12 @@ export default {
     align-items: center;
     justify-content: center;
   }
+  .logo {
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    background-color: #000000;
+  }
   .example {
     min-height: 70vh;
   }
@@ -120,7 +127,13 @@ export default {
     width: 0;
     white-space: nowrap;
   }
-  .title, .subtitle {
-    font-weight: normal;
+  .title {
+    font-weight: 300;
+    font-size: 2em;
+    margin: 10px 0 30px 0;
+    color: #000000;
+  }
+  .subtitle {
+    font-weight: 300;
   }
 </style>

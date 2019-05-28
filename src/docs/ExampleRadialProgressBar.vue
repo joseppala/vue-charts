@@ -6,7 +6,7 @@
       :stroke-width="8"
       :animation-duration="1"
       :initial-animation="true"
-      fillColor="#00aaff"
+      fillColor="#000000"
       backgroundColor="#eeeeee"
       width="180px"
       height="180px"
@@ -19,7 +19,8 @@
       :stroke-width="8"
       :animation-duration="1"
       :initial-animation="true"
-      fillColor="#00ef14"
+      stroke-linecap="round"
+      fillColor="#000000"
       backgroundColor="#eeeeee"
       width="180px"
       height="180px"
@@ -30,9 +31,9 @@
   <div class="bar-container">
     <radial-progress-bars
       :bars="[
-        {progress: 0.75, fillColor: '#fb34b5'},
-        {progress: 0.6, fillColor: '#00ef14'},
-        {progress: 0.2, fillColor: '#00aaff'},
+        {progress: 0.75, fillColor: '#000000'},
+        {progress: 0.6, fillColor: '#000000'},
+        {progress: 0.2, fillColor: '#000000'},
       ]"
       :stroke-width="8"
       :animation-duration="1"

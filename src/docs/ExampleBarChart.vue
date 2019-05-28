@@ -36,8 +36,8 @@
         :mapX="chart.mapXCss"
         :mapY="chart.mapYCss"
         :points="points"
-        bar-width="50%"
-        bar-color="#ffaa00">
+        bar-width="30%"
+        bar-color="#000000">
       </bar-plot>
     </chart>
   </div>
@@ -68,13 +68,17 @@ export default {
         [0, 10],
         [1, 50],
         [2, 40],
-        [3, 45],
-        [4, 20],
-        [5, 60],
+        [3, 20],
+        [4, 25],
+        [5, 40],
+        [6, 45],
+        [7, 20],
+        [8, 60],
+        [9, 50],
       ],
       xAxis: {
-        min: -0.3,
-        max: 5.3
+        min: -0.1,
+        max: 9.1
       },
       yAxis: {
         min: 0,
@@ -96,6 +100,10 @@ export default {
         {value: 3, text: '3'},
         {value: 4, text: '4'},
         {value: 5, text: '5'},
+        {value: 6, text: '6'},
+        {value: 7, text: '7'},
+        {value: 8, text: '8'},
+        {value: 9, text: '9'},
       ]
     }
   }
